@@ -167,7 +167,7 @@ export const exerciseLogsRelations = relations(
     exerciseLogsTable,
     ({ one }) => ({
         user: one(usersTable, {
-            fields: [exerciseLogsTable.id],
+            fields: [exerciseLogsTable.userId],
             references: [usersTable.id],
         }),
         workoutDay: one(workoutDaysTable, {

@@ -71,3 +71,6 @@ export async function searchExercisesByCategory(categoryName: string) {
     });
     return result;
 }
+export async function findAllCategories() {
+    return await db.select().from(categoriesTable);
+}
